@@ -2,6 +2,11 @@
 FROM python:3.11-slim
 
 
+# Set environment variables
+# ENV PYTHONDONTWRITEBYTECODE 1
+# ENV PYTHONUNBUFFERED 1
+
+
 # Set the working directory
 WORKDIR /app
 
@@ -28,6 +33,11 @@ RUN pip3 install -r requirements.txt
 # COPY . /app/
 COPY . .
 
+
+
+# Run Django management commands if needed (e.g., collectstatic, migrate)
+# RUN python manage.py collectstatic --noinput
+# RUN python manage.py migrate
 
 
 # Specify the default command to run the application
