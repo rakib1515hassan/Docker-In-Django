@@ -17,13 +17,15 @@ RUN apt-get update \
 COPY requirements.txt /myproject/
 
 # Install Python dependencies
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
+
+##! এখানে এগুলো লেখার দরকার নেই, কারন এগুলো আমরা `docker-compose.yml` File লিখেছি
 # Copy the application code
-COPY . /myproject/
+# COPY . /myproject/
 
 # Expose the port the app runs on
-EXPOSE 8000
+# EXPOSE 8000
 
 # Default command
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
