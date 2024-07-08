@@ -9,6 +9,7 @@
       >> docker-compose build
 
 
+
     2) Docker Compose the image
       >> docker-compose run --rm app myproject startproject core .
 
@@ -27,5 +28,6 @@
       v) django-admin startproject core .: `django-admin startproject` কমান্ডটি ব্যবহার করে একটি নতুন Django প্রজেক্ট শুরু করা হয়। এখানে core হলো প্রজেক্টের নাম এবং . (ডট) নির্দেশ করে যে প্রজেক্ট ফাইলগুলো বর্তমান ডিরেক্টরিতে তৈরি হবে।
 
 
-## Now Run the Django Server
-    >> docker-compose up
+
+    3) Now Run the Django Server
+        >> docker-compose up
